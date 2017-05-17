@@ -7,7 +7,7 @@
 //:
 //: Reproduce this image:
 //:
-//: ![Subhumans](Subhumans.jpg "Subhumans")
+//: ![Subhumans](Subhumans.png "Subhumans")
 /*:
  ## Notes:
  * you will work on a canvas that is 400 pixels wide by 600 pixels high
