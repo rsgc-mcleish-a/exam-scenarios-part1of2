@@ -3,7 +3,7 @@
 //: ## Your goal
 //: Reproduce this image:
 //:
-//: ![Dead Kennedys](DeadKennedys.jpg "Dead Kennedys")
+//: ![Dead Kennedys](DeadKennedys.png "Dead Kennedys")
 /*:
  ## Notes:
  * you will work on a canvas that is 400 pixels wide by 600 pixels high
