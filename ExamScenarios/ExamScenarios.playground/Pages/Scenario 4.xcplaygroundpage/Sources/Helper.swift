@@ -405,22 +405,22 @@ open class Canvas : CustomPlaygroundQuickLookable {
     }
     
     // Draw an ellipse on the image
-    open func drawEllipse(centreX: Int, centreY: Int, width: Int, height: Int, borderWidth: Int = 0) {
+    open func drawEllipse(centreX: Float, centreY: Float, width: Float, height: Float, borderWidth: Int = 0) {
         
         // Set attributes of shape based on the canvas scale factor
         var centreX = centreX
-        centreX *= scale
+        centreX *= Float(scale)
         var centreY = centreY
-        centreY *= scale
+        centreY *= Float(scale)
         var width = width
-        width *= scale
+        width *= Float(scale)
         var height = height
-        height *= scale
+        height *= Float(scale)
         var borderWidth = borderWidth
         borderWidth *= scale
         
         // Make the new path
-        let path = NSBezierPath(ovalIn: NSRect(x: centreX - width/2, y: centreY - height/2, width: width, height: height))
+        let path = NSBezierPath(ovalIn: NSRect(x: CGFloat(centreX - width/2), y: CGFloat(centreY - height/2), width: CGFloat(width), height: CGFloat(height)))
         
         // Set width of border
         if borderWidth > 0 {
@@ -444,6 +444,14 @@ open class Canvas : CustomPlaygroundQuickLookable {
         if (self.drawShapesWithFill == true) {
             path.fill()
         }
+        
+    }
+    
+    
+    // Draw an ellipse on the image
+    open func drawEllipse(centreX: Int, centreY: Int, width: Int, height: Int, borderWidth: Int = 0) {
+        
+        self.drawEllipse(centreX: Float(centreX), centreY: Float(centreY), width: Float(width), height: Float(height), borderWidth: borderWidth)
         
     }
     
