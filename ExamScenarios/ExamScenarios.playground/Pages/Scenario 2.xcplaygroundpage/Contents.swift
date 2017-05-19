@@ -36,12 +36,12 @@ canvas.drawShapesWithBorders = false
 // Blue Circles Left
 func leftBlueCircles () {
     for p in 0...10 {
-        let y = 200 + 37 * p
+        let y = 222 + 36 * p
         let q = 0 + 1 * p
     
         for i in 0...0 + q {
-        let x = 53 + 37 * i - 37
-        let d = 35 - 3 * i
+        let x = 55 + 36 * i - 37
+        let d = 36 - 3 * i
     
         canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
     
@@ -50,8 +50,43 @@ func leftBlueCircles () {
     }
 }
 
-leftBlueCircles()
 
+
+func leftRedCircles () {
+    for p in 0...10 {
+        let y = 214 + 36 * p
+        let q = 0 + 1 * p
+        
+        for i in 0...0 + q {
+            let x = 51 + 36 * i - 37
+            let d = 36 - 3 * i
+            
+            canvas.fillColor = Color(hue: 350, saturation: 100, brightness: 80, alpha: 75)
+            
+            canvas.drawEllipse(centreX: x, centreY: y, width: d, height: d)
+        }
+    }
+}
+
+func leftYellowCircles () {
+    for p in 0...10 {
+        let y = 214 + 36 * p
+        let q = 0 + 1 * p
+        
+        for i in 0...0 + q {
+            let x = 59 + 36 * i - 37
+            let d = 36 - 3 * i
+            
+            canvas.fillColor = Color(hue: 49, saturation: 96, brightness: 87, alpha: 100)
+            
+            canvas.drawEllipse(centreX: x, centreY: y, width: d, height: d)
+        }
+    }
+}
+
+leftYellowCircles()
+leftRedCircles()
+leftBlueCircles()
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
