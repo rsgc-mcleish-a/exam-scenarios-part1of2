@@ -29,7 +29,17 @@ let red = Color(hue: 350, saturation: 100, brightness: 80, alpha: 75)
 let blue = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
 let yellow = Color(hue: 49, saturation: 96, brightness: 87, alpha: 100)
 
-// Your code below...
+
+
+
+
+
+    for x in stride(from: 300, through: 20, by: -5) {
+        
+        
+        canvas.drawEllipse(centreX: x, centreY: 500, width: 55, height: x)
+}
+
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

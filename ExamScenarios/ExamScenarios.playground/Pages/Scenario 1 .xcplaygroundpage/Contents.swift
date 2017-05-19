@@ -23,6 +23,115 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+canvas.fillColor = Color.init(hue: 385, saturation: 100, brightness: 100, alpha: 90)
+
+canvas.drawRectangle(centreX: 150, centreY: 300, width: 1000, height: 1000)
+
+
+//Functions
+func drawBlackSquare(centreX: Int, centreY: Int) {
+    
+    canvas.drawShapesWithBorders = false
+    
+    canvas.fillColor = Color.black
+    
+    canvas.drawRectangle(centreX: centreX, centreY: centreY, width: 100, height: 100)
+}
+func drawBrownSquare(centreX: Int, centreY: Int) {
+    
+    canvas.drawShapesWithBorders = false
+    
+    canvas.fillColor = Color.init(hue: 385, saturation: 100, brightness: 20, alpha: 90)
+    
+    canvas.drawRectangle(centreX: centreX, centreY: centreY, width: 100, height: 100)
+}
+func drawLightBrownSquare(centreX: Int, centreY: Int) {
+    
+    canvas.drawShapesWithBorders = false
+    
+    canvas.fillColor = Color.init(hue: 385, saturation: 100, brightness: 50, alpha: 90)
+    
+    canvas.drawRectangle(centreX: centreX, centreY: centreY, width: 100, height: 100)
+}
+func drawBrownOrangeSquare(centreX: Int, centreY: Int) {
+    
+    canvas.drawShapesWithBorders = false
+    
+    canvas.fillColor = Color.init(hue: 385, saturation: 100, brightness: 55, alpha: 40)
+    
+    canvas.drawRectangle(centreX: centreX, centreY: centreY, width: 100, height: 100)
+}
+
+
+//Rotation
+canvas.rotate(by: 45)
+
+canvas.translate(byX: 235, byY: -235)
+
+//Bottom Row
+drawBlackSquare(centreX: 50, centreY: 50)
+
+drawBrownSquare(centreX: 150, centreY: 50)
+
+drawLightBrownSquare(centreX: 250, centreY: 50)
+
+drawBrownOrangeSquare(centreX: 350, centreY: 50)
+
+//Third Row
+
+drawBrownSquare(centreX: 50, centreY: 150)
+
+drawLightBrownSquare(centreX: 150, centreY: 150)
+
+drawBrownOrangeSquare(centreX: 250, centreY: 150)
+
+drawBlackSquare(centreX: 350, centreY: 150)
+
+
+//Second Row
+drawLightBrownSquare(centreX: 50, centreY: 250)
+
+drawBrownOrangeSquare(centreX: 150, centreY: 250)
+
+drawLightBrownSquare(centreX: 250, centreY: 250)
+
+drawBrownSquare(centreX: 350, centreY: 250)
+
+//First Row
+drawBrownOrangeSquare(centreX: 50, centreY: 350)
+
+drawLightBrownSquare(centreX: 150, centreY: 350)
+
+drawBrownSquare(centreX: 250, centreY: 350)
+
+drawBlackSquare(centreX: 350, centreY: 350)
+
+
+//Writing
+canvas.drawText(message: "dead kennedys", size: 40, x: 0, y: 400)
+
+canvas.textColor = Color.white
+
+canvas.drawText(message: "with arizona's ", size: 8, x: 5, y: 370)
+
+canvas.drawText(message: "the feederz plus ", size: 8, x: 5, y: 355)
+
+canvas.drawText(message: "la's black flag", size: 8, x: 5, y: 340)
+
+canvas.drawText(message: "wednesday", size: 8, x: 110, y: 370)
+
+canvas.drawText(message: "october 10 1979", size: 8, x: 110, y: 355)
+
+canvas.drawText(message: "admission $2", size: 8, x: 110, y: 340)
+
+canvas.drawText(message: "mabuhay gardens", size: 8, x: 210, y: 370)
+
+canvas.drawText(message: "443 brodway", size: 8, x: 210, y: 355)
+
+canvas.drawText(message: "san francisco, ca", size: 8, x: 210, y: 340)
+
+
+
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
