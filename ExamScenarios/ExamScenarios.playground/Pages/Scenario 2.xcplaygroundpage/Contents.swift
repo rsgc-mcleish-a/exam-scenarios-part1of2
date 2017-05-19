@@ -28,19 +28,118 @@ let offWhite = Color(hue: 86, saturation: 6, brightness: 88, alpha: 100)
 let red = Color(hue: 350, saturation: 100, brightness: 80, alpha: 75)
 let blue = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
 let yellow = Color(hue: 49, saturation: 96, brightness: 87, alpha: 100)
+canvas.drawShapesWithBorders = false
 
 
 
 
-
-
-    for x in stride(from: 300, through: 20, by: -5) {
-        
-        
-        canvas.drawEllipse(centreX: x, centreY: 500, width: 55, height: x)
+// First Row
+for i in 0...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 582, width: d, height: d)
 }
 
+// Second Row
+for i in 1...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 547, width: d, height: d)
+}
 
+// Third Row
+for i in 2...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 512, width: d, height: d)
+}
+
+// Fourth Row
+for i in 3...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 477, width: d, height: d)
+}
+
+// Fifth Row
+for i in 4...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 442, width: d, height: d)
+}
+
+// Sixth Row
+for i in 5...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 407, width: d, height: d)
+}
+
+// Seventh Row
+for i in 6...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 372, width: d, height: d)
+}
+
+// Eigth Row
+for i in 7...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 337, width: d, height: d)
+}
+
+// Nineth Row
+for i in 8...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 302, width: d, height: d)
+}
+
+for i in 9...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 267, width: d, height: d)
+}
+
+for i in 10...10 {
+    let x = 385 - 37 * i
+    let d = 5 + 3 * i
+    
+    canvas.fillColor = Color(hue: 196, saturation: 100, brightness: 75, alpha: 50)
+    
+    canvas.drawEllipse(centreX: x, centreY: 232, width: d, height: d)
+}
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView

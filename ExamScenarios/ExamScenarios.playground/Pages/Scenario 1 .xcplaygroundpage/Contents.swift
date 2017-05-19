@@ -68,6 +68,7 @@ canvas.rotate(by: 45)
 
 canvas.translate(byX: 235, byY: -235)
 
+
 //Bottom Row
 drawBlackSquare(centreX: 50, centreY: 50)
 
