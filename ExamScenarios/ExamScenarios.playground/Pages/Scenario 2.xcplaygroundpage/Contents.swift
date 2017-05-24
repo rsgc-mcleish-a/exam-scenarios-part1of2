@@ -35,126 +35,65 @@ canvas.drawShapesWithBorders = false
 canvas.fillColor = offWhite
 canvas.drawRectangle(centreX: 300, centreY: 400, width: 1000, height: 1000)
 
-//Function for drawing circles
-func drawCircles () {
-    leftYellowCircles()
-    leftRedCircles()
-    leftBlueCircles()
-    rightYellowCircles()
-    rightRedCircles()
-    rightBlueCircles()
-}
 
 
-// Function for left blue circles
-func leftBlueCircles () {
+
+func leftHalf () {
     for p in 0...10 {
         let y = 222 + 36 * p
         let increasingRow = 0 + 1 * p
-    
-        for circleAmount in 0...0 + increasingRow {
-        let x = 55 + 36 * circleAmount - 37
-        let widthHeight = 36 - 3 * circleAmount
-    
-        canvas.fillColor = blue
-    
-        canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
-        }
-    }
-}
-
-// Function for left red circles
-func leftRedCircles () {
-    for p in 0...10 {
-        let y = 214 + 36 * p
-        let increasingRow = 0 + 1 * p
         
         for circleAmount in 0...0 + increasingRow {
-            let x = 51 + 36 * circleAmount - 37
+            let x = 55 + 36 * circleAmount - 37
             let widthHeight = 36 - 3 * circleAmount
             
-            canvas.fillColor = red
-            
-            canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
-        }
-    }
-}
-
-// Function for left yellow circles
-func leftYellowCircles () {
-    for p in 0...10 {
-        let y = 214 + 36 * p
-        let increasingRow = 0 + 1 * p
-        
-        for circleAmount in 0...0 + increasingRow {
-            let x = 59 + 36 * circleAmount - 37
-            let widthHeight = 36 - 3 * circleAmount
             
             canvas.fillColor = yellow
+            canvas.drawEllipse(centreX: x + 4, centreY: y - 8, width: widthHeight, height: widthHeight)
             
+            canvas.fillColor = red
+            canvas.drawEllipse(centreX: x - 4, centreY: y - 8, width: widthHeight, height: widthHeight)
+            
+            canvas.fillColor = blue
             canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
+            
+        
+            
+            
         }
     }
 }
 
+
 // Function for right blue circles
-func rightBlueCircles () {
+func rightHalf () {
     for p in 1...10 {
-        let x = 415 - 36 * p
-        let decreasingRow = 10 - 1 * p
+        let x = 18 + 36 * p
+        let decreasingRow = -1 + 1 * p
         
         for circleAmount in 0...0 + decreasingRow {
             let y = 222 + 36 * circleAmount
             let widthHeight = 36 - 3 * circleAmount
             
-            canvas.fillColor = blue
-            
-            canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
-        }
-    }
-}
-
-// Function for right red circles
-func rightRedCircles () {
-    for p in 1...10 {
-        let x = 411 - 36 * p
-        let decreasingRow = 10 - 1 * p
-        
-        for circleAmount in 0...0 + decreasingRow {
-            let y = 214 + 36 * circleAmount
-            let widthHeight = 36 - 3 * circleAmount
+            canvas.fillColor = yellow
+            canvas.drawEllipse(centreX: x + 4, centreY: y - 8, width: widthHeight, height: widthHeight)
             
             canvas.fillColor = red
+            canvas.drawEllipse(centreX: x - 4, centreY: y - 8, width: widthHeight, height: widthHeight)
             
+            canvas.fillColor = blue
             canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
         }
     }
 }
 
-// Function for right yellow circles
-func rightYellowCircles () {
-    for p in 1...10 {
-        let x = 419 - 36 * p
-        let decreasingRow = 10 - 1 * p
-        
-        for circleAmount in 0...0 + decreasingRow {
-            let y = 214 + 36 * circleAmount
-            let widthHeight = 36 - 3 * circleAmount
-            
-            canvas.fillColor = yellow
-            
-            canvas.drawEllipse(centreX: x, centreY: y, width: widthHeight, height: widthHeight)
-        }
-    }
-}
+
 
 //Police Writing
-func writeThePolice () {
+func writing () {
     canvas.textColor = Color.init(hue: 100, saturation: 100, brightness: 0, alpha: 80)
     canvas.drawText(message: "the police", size: 60, x: 10, y: 120)
-}
 
-func bottemWriting() {
     canvas.textColor = Color.init(hue: 100, saturation: 100, brightness: 0, alpha: 80)
     
     canvas.drawText(message: "friday & saturday", size: 8, x: 10, y: 20)
@@ -170,12 +109,11 @@ func bottemWriting() {
     canvas.drawText(message: "first u.s appearance!", size: 8, x: 285, y: 10)
 }
 
-
-
 //Everything
-drawCircles()
-writeThePolice()
-bottemWriting()
+leftHalf()
+rightHalf()
+writing()
+
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView
