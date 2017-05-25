@@ -30,61 +30,66 @@ canvas.drawRectangle(centreX: 150, centreY: 300, width: 1000, height: 1000)
 canvas.drawShapesWithBorders = false
 
 
+//Rotation
+canvas.rotate(by: 45)
 
-func drawRectangles() {
+canvas.translate(byX: 235, byY: -235)
 
-    for q in 0...3 {
-        let x = 50 + 100 * q
-        let c = 0 + 25 * q
+
+
+//Draw Square Grid
+canvas.fillColor = Color.init(hue: 20, saturation: 78, brightness: 50, alpha: 100)
+
+for x in stride(from: 0, through: 300, by: 100) {
+    for y in stride(from: 0, through: 300, by: 100) {
         
-        
-    
-        for row in 0...3 {
-        let y = 50 + 100 * row
-        let color = c + 25 * row
-        
-    
-                canvas.fillColor = Color.init(hue: 385, saturation: 90, brightness: color, alpha: 100)
-            
-                canvas.drawRectangle(centreX: x, centreY: y, width: 100, height: 100)
+        //Dark Brown
+        if x + y == 100 || x + y == 500 {
+            canvas.fillColor = Color.init(hue: 25, saturation: 100, brightness: 25, alpha: 100)
         }
+        
+        //Light Brown
+        if x + y == 200 || x + y == 400 {
+            canvas.fillColor = Color.init(hue: 25, saturation: 95, brightness: 50, alpha: 100)
+        }
+        
+        //Super Light Brown
+        if x + y == 300 {
+            canvas.fillColor = Color.init(hue: 25, saturation: 90, brightness: 75, alpha: 100)
+        }
+        
+        //Black
+        if x + y == 0 || x + y == 600 {
+            canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+        }
+        
+        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 110, height: 110)
     }
 }
 
 
+//Writing
+canvas.drawText(message: "dead kennedys", size: 40, x: 0, y: 410)
 
+canvas.textColor = Color.white
 
+canvas.drawText(message: "with arizona's ", size: 8, x: 5, y: 390)
 
-//drawRectangles()
+canvas.drawText(message: "the feederz plus ", size: 8, x: 5, y: 380)
 
-//Rotation
-//canvas.rotate(by: 45)
-//
-//canvas.translate(byX: 235, byY: -235)
+canvas.drawText(message: "la's black flag", size: 8, x: 5, y: 370)
 
+canvas.drawText(message: "wednesday", size: 8, x: 110, y: 390)
 
-////Writing
-//canvas.drawText(message: "dead kennedys", size: 40, x: 0, y: 400)
-//
-//canvas.textColor = Color.white
-//
-//canvas.drawText(message: "with arizona's ", size: 8, x: 5, y: 370)
-//
-//canvas.drawText(message: "the feederz plus ", size: 8, x: 5, y: 355)
-//
-//canvas.drawText(message: "la's black flag", size: 8, x: 5, y: 340)
-//
-//canvas.drawText(message: "wednesday", size: 8, x: 110, y: 370)
-//
-//canvas.drawText(message: "october 10 1979", size: 8, x: 110, y: 355)
-//
-//canvas.drawText(message: "admission $2", size: 8, x: 110, y: 340)
-//
-//canvas.drawText(message: "mabuhay gardens", size: 8, x: 210, y: 370)
-//
-//canvas.drawText(message: "443 brodway", size: 8, x: 210, y: 355)
-//
-//canvas.drawText(message: "san francisco, ca", size: 8, x: 210, y: 340)
+canvas.drawText(message: "october 10 1979", size: 8, x: 110, y: 380)
+
+canvas.drawText(message: "admission $2", size: 8, x: 110, y: 370)
+
+canvas.drawText(message: "mabuhay gardens", size: 8, x: 210, y: 390)
+
+canvas.drawText(message: "443 brodway", size: 8, x: 210, y: 380)
+
+canvas.drawText(message: "san francisco, ca", size: 8, x: 210, y: 370)
 
 
 
